@@ -17,22 +17,22 @@ function App() {
       </section>
 
       <section id="about" className="min-h-screen">
-      <a href="#about">About</a>
+      <a href="#about"></a>
         <About />
       </section>
 
       <section id="skills" className="min-h-screen">
-      <a href="#skills">Skills</a>
+      <a href="#skills"></a>
         <Skills />
       </section>
 
       <section id="projects" className="min-h-screen">
-      <a href="#projects">Projects</a>
+      <a href="#projects"></a>
         <Projects />
       </section>
 
       <section id="contact" className="min-h-screen">
-      <a href="#contact">Contact</a>
+      <a href="#contact"></a>
         <Contact />
       </section>
     </>

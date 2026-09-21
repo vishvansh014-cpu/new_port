@@ -1,35 +1,67 @@
 import React from 'react'
 
-const contact = () => {
-    return (
-        <div>
+function contact() {
+  return (
+    <section className="min-h-screen flex items-center justify-center px-10 bg-gradient-to-r bg-violet-400 m-0 p-10">
 
-            <form className="flex flex-col gap-4 max-w-md mx-auto mt-8">
+      <div className="grid md:grid-cols-2 gap-10 w-full max-w-6xl">
 
-                <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="p-3 rounded bg-gray-800"
-                />
+        {/* LEFT SIDE */}
+        <div className="flex flex-col justify-center">
+          <p className="text-black font-bold tracking-widest mb-2 text-2xl "><h1>CONTACT</h1></p>
 
-                <input
-                    type="email"
-                    placeholder="Your Email"
-                    className="p-3 rounded bg-gray-800"
-                />
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            Let's Build <br /> Something Great
+          </h1>
 
-                <textarea
-                    placeholder="Your Message"
-                    className="p-3 rounded bg-gray-800"
-                ></textarea>
+          <p className="text-gray-400 mb-6">
+            Have a project, opportunity or idea? Let's talk.
+          </p>
 
-                <button className="bg-green-500 py-2 rounded">
-                    Send Message
-                </button>
-
-            </form>
+          <div className="bg-gray-800 text-red-50 px-5 py-3 rounded-lg w-fit flex items-center gap-2">
+            vishvansh@gmail.com
+          </div>
         </div>
-    )
+
+        {/* RIGHT SIDE */}
+        <div className="bg-gray-900 p-8 rounded-2xl shadow-lg">
+
+          <form className="flex flex-col gap-6">
+
+            {/* NAME + EMAIL */}
+            <div className="flex flex-col md:flex-row gap-4">
+              <input
+                type="text"
+                placeholder="Your name"
+                className="flex-1 p-3 rounded-lg bg-gray-800 outline-none"
+              />
+              <input
+                type="email"
+                placeholder="you@example.com"
+                className="flex-1 p-3 rounded-lg bg-gray-800 outline-none"
+              />
+            </div>
+
+            {/* MESSAGE */}
+            <textarea
+              placeholder="Tell me about the role, project or idea..."
+              rows="5"
+              className="p-3 rounded-lg bg-gray-800 outline-none"
+            ></textarea>
+
+            {/* BUTTON */}
+            <button className="bg-green-400 text-black py-3 rounded-full font-semibold hover:scale-105 transition">
+              Send Message ✈️
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+  );
 }
 
-export default contact
+
+export default contact;

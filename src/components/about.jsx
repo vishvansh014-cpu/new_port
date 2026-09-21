@@ -10,7 +10,7 @@ function about() {
                     About Me
                 </h1>
 
-                <p className="text-gray-400 mb-4">
+                <p className="text-black mb-4">
                     I am an AIML student passionate about building real-world applications.
 
                     I have experience in Python, Machine Learning, and Web Development using React and Node.js.
@@ -20,11 +20,11 @@ function about() {
                     Currently, I am focusing on DSA and backend development to prepare for placements.
                 </p>
 
-                <p className="text-gray-400 mb-4">
+                <p className="text-black mb-4">
                     I have worked on projects like a Todo App and a URL Shortener using React and Node.js.
                 </p>
 
-                <p className="text-gray-400">
+                <p className="text-black">
                     Currently, I am focusing on Data Structures and Algorithms and backend development.
                 </p>
             </div>
