@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "css": "^3.0.0",
+    "framer-motion": "^13.4.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "tailwind": "^4.0.0"

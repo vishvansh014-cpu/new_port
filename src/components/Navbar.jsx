@@ -5,12 +5,13 @@ const Navbar = () => {
     <div className='bg-slate-800 justify-center flex'>
       <nav>
         <ul className='flex gap-5'>
-          <li className='bg-lime-400 rounded-2xl hover:bg-lime-100-600 hover:text-emerald-700 hover:text-xl'>Home</li>
-          <li className='bg-lime-400 rounded-2xl hover:bg-lime-100-600 hover:text-emerald-700 hover:text-xl'>Highlight</li>
-          <li className='bg-lime-400 rounded-2xl hover:bg-lime-100-600 hover:text-emerald-700 hover:text-xl'>About</li>
-          <li className='bg-lime-400 rounded-2xl hover:bg-lime-100-600 hover:text-emerald-700 hover:text-xl'>Stack</li>
-          <li className='bg-lime-400 rounded-2xl hover:bg-lime-100-600 hover:text-emerald-700 hover:text-xl'>Project</li>
-          <li className='bg-lime-400 rounded-2xl hover:bg-lime-100-600 hover:text-emerald-700 hover:text-xl'>Contact</li>
+          <nav className="flex gap-6">
+            <a className=' bg-cyan-400 rounded-2xl' href="#home">Home</a>
+            <a className=' bg-cyan-400 rounded-2xl' href="#about">About</a>
+            <a className=' bg-cyan-400 rounded-2xl' href="#skills">Stack</a>
+            <a className=' bg-cyan-400 rounded-2xl' href="#projects">Project</a>
+            <a className=' bg-cyan-400 rounded-2xl' href="#contact">Contact</a>
+          </nav>
         </ul>
       </nav>
 
