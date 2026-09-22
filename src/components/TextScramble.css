@@ -1,0 +1,17 @@
+.em-scramble {
+  display: grid;
+  place-items: center;
+  min-height: 300px;
+  background: #080c19;
+  color: #f1f5ff;
+}
+
+.em-scramble__headline {
+  font-size: 60px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.em-scramble__visual {
+  text-shadow: 0 0 20px rgba(103, 134, 255, 0.5);
+}

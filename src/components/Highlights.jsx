@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const Highlights = () => {
     return (
@@ -25,7 +26,7 @@ const Highlights = () => {
 
                         initial={{ opacity: 0, scale: 0 }}          // starts invisible and shrunk to 0
                         whileInView={{ opacity: 1, scale: 1 }}      // grows to full size and visible
-                        transition={{ duration: 1.5, ease: "easeOut" }}
+                        transition={{ duration: 1, ease: "easeOut" }}
                     >
                         <div className="bg-[#0B1A2A] border border-gray-800 p-6 rounded-2xl hover:scale-105 transition">
 
@@ -34,12 +35,12 @@ const Highlights = () => {
                                 ACHIEVEMENT
                             </p>
 
-                            <h2 className="text-2xl font-bold mb-4">
-                                TCS Prime Offer
+                            <h2 className="text-2xl text-white font-bold mb-4">
+                                DSA Problem Solving
                             </h2>
 
                             <p className="text-gray-400 mb-6">
-                                Secured offer through strong DSA and problem-solving skills.
+                                Practicing Data Structures & Algorithms in C++ with focus on arrays, recursion, and problem-solving for product-based companies.
                             </p>
 
                             <button className="px-4 py-2 border border-green-400 text-green-400 rounded-full">
@@ -49,49 +50,64 @@ const Highlights = () => {
                         </div>
                     </motion.div>
                     {/* Card 2 */}
-                    <div className="bg-[#0B1A2A] border border-gray-800 p-6 rounded-2xl hover:scale-105 transition">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0 }}          // starts invisible and shrunk to 0
+                        whileInView={{ opacity: 1, scale: 1 }}      // grows to full size and visible
+                        transition={{ duration: 2, ease: "easeOut" }}
+                    >
+                        <div className="bg-[#0B1A2A] border border-gray-800 p-6 rounded-2xl hover:scale-105 transition">
 
-                        <p className="text-green-400 text-sm tracking-widest mb-3">
-                            ACHIEVEMENT
-                        </p>
 
-                        <h2 className="text-2xl font-bold mb-4">
-                            TCS Prime Offer
-                        </h2>
 
-                        <p className="text-gray-400 mb-6">
-                            Secured offer through strong DSA and problem-solving skills.
-                        </p>
+                            <p className="text-green-400 text-sm tracking-widest mb-3">
+                                ACHIEVEMENT
+                            </p>
 
-                        <button className="px-4 py-2 border border-green-400 text-green-400 rounded-full">
-                            TCS Prime
-                        </button>
+                            <h2 className="text-2xl text-white font-bold mb-4">
+                                ML Sales Analysis
+                            </h2>
 
-                    </div>
+                            <p className="text-gray-400 mb-6">
+                                Built a machine learning project using NumPy, Pandas, and visualization libraries to analyze and extract insights from sales data.
+                            </p>
+
+                            <button className="px-4 py-2 border border-green-400 text-green-400 rounded-full">
+                                TCS Prime
+                            </button>
+
+                        </div>
+                    </motion.div>
                     {/* Card 3 */}
-                    <div className="bg-[#0B1A2A] border border-gray-800 p-6 rounded-2xl hover:scale-105 transition">
+                    <motion.div
 
-                        <p className="text-green-400 text-sm tracking-widest mb-3">
-                            ACHIEVEMENT
-                        </p>
+                        initial={{ opacity: 0, scale: 0 }}          // starts invisible and shrunk to 0
+                        whileInView={{ opacity: 1, scale: 1 }}      // grows to full size and visible
+                        transition={{ duration: 3, ease: "easeOut" }}
+                    >
+                        <div className="bg-[#0B1A2A] border border-gray-800 p-6 rounded-2xl hover:scale-105 transition">
 
-                        <h2 className="text-2xl font-bold mb-4">
-                            TCS Prime Offer
-                        </h2>
+                            <p className="text-green-400 text-sm tracking-widest mb-3">
+                                ACHIEVEMENT
+                            </p>
 
-                        <p className="text-gray-400 mb-6">
-                            Secured offer through strong DSA and problem-solving skills.
-                        </p>
+                            <h2 className="text-2xl text-white font-bold mb-4">
+                                Short URL Backend
+                            </h2>
 
-                        <button className="px-4 py-2 border border-green-400 text-green-400 rounded-full">
-                            TCS Prime
-                        </button>
+                            <p className="text-gray-400 mb-6">
+                                Developed a URL shortening service using Node.js, Express, and MongoDB with unique short code generation.
+                            </p>
 
-                    </div>
+                            <button className="px-4 py-2 border border-green-400 text-green-400 rounded-full">
+                                TCS Prime
+                            </button>
+
+                        </div>
+                    </motion.div>
                 </div>
 
-            </section>
-        </div>
+            </section >
+        </div >
     )
 }
 

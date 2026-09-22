@@ -6,11 +6,14 @@ import Projects from "./components/project";
 import Contact from "./components/contact";
 import Photo from "./components/photo_card";
 import Highlights from "./components/Highlights";
+import TextScramble from "./components/TextScramble";
 
 function App() {
   return (
     <>
+    
       <Navbar />
+      
 
       <section id="home" className="min-h-screen">
         <Hero />

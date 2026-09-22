@@ -33,11 +33,12 @@ function contact() {
                     {/* RIGHT SIDE */}
                     <div className="bg-gray-900 p-8 rounded-2xl shadow-lg">
 
-                        <form className="flex flex-col gap-6">
+                        <form className="flex flex-col gap-6    ">
 
                             {/* NAME + EMAIL */}
                             <div className="flex flex-col md:flex-row gap-4">
                                 <input
+
                                     type="text"
                                     placeholder="Your name"
                                     className="flex-1 p-3 rounded-lg bg-gray-800 outline-none"
@@ -53,7 +54,7 @@ function contact() {
                             <textarea
                                 placeholder="Tell me about the role, project or idea..."
                                 rows="5"
-                                className="p-3 rounded-lg bg-gray-800 outline-none"
+                                className="p-3 rounded-lg bg-gray-800 outline-none "
                             ></textarea>
 
                             {/* BUTTON */}
