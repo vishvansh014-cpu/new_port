@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 function about() {
     return (
-        <div className="flex flex-col md:flex-row items-center justify-between px-10 gap-10">
+        <div className="flex flex-col md:flex-row items-center justify-between px-10 gap-10 ">
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}

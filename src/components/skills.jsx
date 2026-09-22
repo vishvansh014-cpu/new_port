@@ -1,10 +1,10 @@
 import React from 'react'
 import python from "../assets/python.png"
-import Cpp from "../assets/c++.jpg"
+import Cpp from "../assets/c++.png"
 import JavaScript from "../assets/js.webp"
-import ract from "../assets/new.jpg"
-import node from "../assets/OIP.webp"
-import express from "../assets/exprees.webp"
+import ract from "../assets/r.png"
+import node from "../assets/node.png"
+import express from "../assets/ex.png"
 import { motion } from "framer-motion";
 
 function Skills() {
@@ -71,7 +71,7 @@ function Skills() {
                             <img src={ract} alt="React" className="w-9 h-9" /> React.js
                         </li>
                         <li className="flex items-center gap-2">
-                            <img src={node} alt="node" className="w-15 h-9" /> Node.js
+                            <img src={node} alt="node" className="w-16 h-15" /> Node.js
                         </li>
                         <li className="flex items-center gap-2">
                             <img src={express} alt="express" className="w-15 h-11" /> Express.js

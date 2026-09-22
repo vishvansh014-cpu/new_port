@@ -44,7 +44,7 @@ const Highlights = () => {
                             </p>
 
                             <button className="px-4 py-2 border border-green-400 text-green-400 rounded-full">
-                                TCS Prime
+                                150+ <br /> Problem
                             </button>
 
                         </div>
