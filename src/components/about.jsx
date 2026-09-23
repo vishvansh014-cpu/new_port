@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 
 function about() {
     return (
-        <div className="flex flex-col md:flex-row items-center justify-between px-10 gap-10 ">
+        <div className="min-h-screen flex flex-col md:flex-row items-center justify-between px-10 gap-10 ">
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}>
 
                 {/* LEFT SIDE (TEXT) */}
-                <div className="max-w-xl">
+                <div className="">
                     <h1 className="text-3xl md:text-4xl font-bold mb-4">
                         About Me
                     </h1>

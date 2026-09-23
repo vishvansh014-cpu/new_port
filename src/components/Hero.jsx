@@ -9,7 +9,7 @@ function Hero() {
     <div className="min-h-screen flex items-center justify-center px-6 bg-[#020617]">
 
       {/* CARD CONTAINER */}
-      <div className="w-full max-w-6xl bg-[#0B1A2A] rounded-2xl p-10 shadow-xl border border-gray-800">
+      <div className="w-full min-h-19 bg-[#0B1A2A] rounded-2xl p-10 shadow-xl from-blue-700 via-blue-500 to-blue-300">
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
 
@@ -24,7 +24,8 @@ function Hero() {
 
             <p className="text-white
             ">
-              AIML student focused on Machine Learning, problem solving, and building real-world applications.
+              Aspiring AI/ML Engineer passionate about building real-world solutions using data and technology.
+              Currently pursuing B.Tech in Artificial Intelligence & Machine Learning, with strong foundations in DSA, Web Development, and Machine Learning.
             </p>
 
             <div className="flex gap-4 mt-6">
@@ -41,14 +42,14 @@ function Hero() {
                 View Resume
               </a>
               <br />
-              <p className="text-white">
-
-                <h1>Open to internships • AIML • Problem Solving
+              <p className="text-white text-xl hover:font-bold hover:text-2xl">
+                <h1 >#OPEN TO WORK
                 </h1>
               </p>
-
             </div>
           </motion.div>
+
+
 
           {/* RIGHT SIDE */}
           <motion.div

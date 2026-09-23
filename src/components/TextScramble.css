@@ -2,6 +2,7 @@
   display: grid;
   place-items: center;
   min-height: 300px;
+  
   background: #080c19;
   color: #f1f5ff;
 }
