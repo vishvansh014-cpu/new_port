@@ -14,11 +14,12 @@ import { section } from "framer-motion/client";
 // import Particlesbg from "./components/ParticlesBg"
 import Background from "./components/Background"
 import { SmoothCursor } from "./components/UI/SmoothCursor";
+import Footer from "./components/Footer"
 
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
-
+  
   useEffect(() => {
     setTimeout(() => {
       setShowIntro(false);
@@ -52,6 +53,7 @@ function App() {
 
             <section id="skills" className=" pt-20 pb-12 px-6 max-w-7xl mx-auto flex flex-col justify-start min-h-screen scroll-mt-24 bg-transparent text-white py-20">
               <Skills />
+              
             </section>
 
             <section id="projects" className=" pt-0 pb-12 px-60 max-w-7xl mx-auto flex flex-col justify-start min-h-screen scroll-mt-24  bg-transparent text-white py-20">
@@ -65,6 +67,7 @@ function App() {
             <section id="contact" className=" pt-0 pb-12 px-6 max-w-7xl mx-auto flex flex-col justify-start min-h-screen scroll-mt-24 bg-transparent text-white py-20">
               <Contact />
             </section>
+            <Footer />
 
           </div>
         </div>
