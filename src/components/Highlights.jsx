@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 const Highlights = () => {
     return (
         <div>
-            <section className="min-h-screen px-10 py-20 bg-gradient-to-r from-black via-blue-900 to-black">
+            <section className="min-h-screen px-10 py-20 bg-gradient-to-r">
 
                 {/* HEADING */}
                 <div className="mb-16">
@@ -28,7 +28,7 @@ const Highlights = () => {
                         whileInView={{ opacity: 1, scale: 1 }}      // grows to full size and visible
                         transition={{ duration: 1, ease: "easeOut" }}
                     >
-                        <div className="bg-[#0B1A2A] border border-gray-800 p-6 rounded-2xl hover:scale-105 transition">
+                        <div className="bg-slate-900/40 backdrop-blur-md border border-slate-800/60 rounded-2xl p-6">
 
 
                             <p className="text-green-400 text-sm tracking-widest mb-3">
@@ -55,7 +55,7 @@ const Highlights = () => {
                         whileInView={{ opacity: 1, scale: 1 }}      // grows to full size and visible
                         transition={{ duration: 2, ease: "easeOut" }}
                     >
-                        <div className="bg-[#0B1A2A] border border-gray-800 p-6 rounded-2xl hover:scale-105 transition">
+                        <div className="bg-slate-900/40 backdrop-blur-md border border-slate-800/60 rounded-2xl p-6">
 
 
 
@@ -84,7 +84,7 @@ const Highlights = () => {
                         whileInView={{ opacity: 1, scale: 1 }}      // grows to full size and visible
                         transition={{ duration: 3, ease: "easeOut" }}
                     >
-                        <div className="bg-[#0B1A2A] border border-gray-800 p-6 rounded-2xl hover:scale-105 transition">
+                        <div className="bg-slate-900/40 backdrop-blur-md border border-slate-800/60 rounded-2xl p-6">
 
                             <p className="text-green-400 text-sm tracking-widest mb-3">
                                 ACHIEVEMENT

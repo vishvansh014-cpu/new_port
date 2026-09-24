@@ -21,7 +21,7 @@ function Contact() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-10 bg-gradient-to-r bg-violet-400 m-0 p-10">
+    <section className="min-h-screen flex items-center justify-center px-10 bg-gradient-to-r m-0 p-10">
 
       <motion.div
         initial={{ opacity: 0, y: 50 }}

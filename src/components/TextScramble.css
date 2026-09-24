@@ -15,4 +15,5 @@
 
 .em-scramble__visual {
   text-shadow: 0 0 20px rgba(103, 134, 255, 0.5);
+   white-space: pre-line;
 }

@@ -4,13 +4,16 @@ import About from "./components/about";
 import Skills from "./components/skills";
 import Projects from "./components/project";
 import Contact from "./components/contact";
-import Photo from "./components/photo_card";
+// import Photo from "./components/photo_card";
 import Highlights from "./components/Highlights";
-import TextScramble from "./components/TextScramble";
+// import TextScramble from "./components/TextScramble";
 import "./App.css";
 import HelloIntro from "./components/hello"
 import { useEffect, useState } from "react";
 import { section } from "framer-motion/client";
+// import Particlesbg from "./components/ParticlesBg"
+import Background from "./components/Background"
+
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
@@ -26,45 +29,43 @@ function App() {
       {showIntro ? (
         <HelloIntro />
       ) : (
-        
-    <div className="cursor">
+        <div className="relative min-h-screen bg-[#030712] text-white">
+          <Background />
 
-      <div className="cursor-follower">
+          {/* ✅ ONLY ONE BACKGROUND LAYER */}
+          {/* <Particlesbg /> */}
 
-        <div className="relative min-h-screen overflow-hidden">
+          {/* ✅ CONTENT ABOVE BACKGROUND */}
+          <div className="relative z-10 ">
 
-          {/* 🌌 GLOBAL BACKGROUND */}
-          <div className="fixed inset-0 -z-10 bg-gradient-to-br from-black via-blue-900 to-black animate-gradient"></div>
+            <Navbar />
 
-          <Navbar />
+            <section id="home" className=" pt-20 pb-12 px-6 max-w-7xl mx-auto flex flex-col justify-start min-h-screen scroll-mt-24 bg-transparent text-white py-20">
+              <Hero />
+            </section>
 
-          <section id="home" className="min-h-screen scroll-mt-24">
-            <Hero />
-          </section>
+            <section id="about" className=" pt-20 pb-12 px-6 max-w-7xl mx-auto flex flex-col justify-start min-h-screen scroll-mt-24 bg-transparent text-white py-20">
+              <About />
+            </section>
 
-          <section id="about" className="min-h-screen scroll-mt-24">
-            <About />
-          </section>
+            <section id="skills" className=" pt-20 pb-12 px-6 max-w-7xl mx-auto flex flex-col justify-start min-h-screen scroll-mt-24 bg-transparent text-white py-20">
+              <Skills />
+            </section>
 
-          <section id="skills" className="min-h-screen scroll-mt-24">
-            <Skills />
-          </section>
+            <section id="projects" className=" pt-0 pb-12 px-60 max-w-7xl mx-auto flex flex-col justify-start min-h-screen scroll-mt-24  bg-transparent text-white py-20">
+              <Projects />
+            </section>
 
-          <section id="projects" className="min-h-screen scroll-mt-24">
-            <Projects />
-          </section>
+            <section id="highlights" className=" pt-0 pb-12  max-w-7xl mx-auto flex flex-col justify-start min-h-screen scroll-mt-24 bg-transparent text-white py-20">
+              <Highlights />
+            </section>
 
-          <section id="highlights" className="min-h-screen scroll-mt-24">
-            <Highlights />
-          </section>
+            <section id="contact" className=" pt-0 pb-12 px-6 max-w-7xl mx-auto flex flex-col justify-start min-h-screen scroll-mt-24 bg-transparent text-white py-20">
+              <Contact />
+            </section>
 
-          <section id="contact" className="min-h-screen scroll-mt-24">
-            <Contact />
-          </section>
-
+          </div>
         </div>
-      </div>
-      </div>
       )}
     </>
   );

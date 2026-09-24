@@ -15,7 +15,7 @@ function projects() {
                 >
 
                     {/* PROJECT 1 */}
-                    <div className="bg-gray-800  text-neutral-50 p-6 rounded-xl shadow hover:scale-105 transition">
+                    <div className="bg-slate-900/40 backdrop-blur-md border border-slate-800/60 rounded-2xl p-6">
                         <h2 className="text-xl font-semibold mb-2">Todo App</h2>
 
                         <p className="text-gray-400 mb-3">
@@ -42,7 +42,7 @@ function projects() {
                     whileInView={{ opacity: 1, scale: 1 }}      // grows to full size and visible
                     transition={{ duration: 3, ease: "easeOut" }}
                 >
-                    <div className="bg-gray-800 text-neutral-50 p-6 rounded-xl shadow hover:scale-105 transition">
+                    <div className="bg-slate-900/40 backdrop-blur-md border border-slate-800/60 rounded-2xl p-6">
 
                         <h2 className="text-xl font-semibold mb-2">Short URL</h2>
 

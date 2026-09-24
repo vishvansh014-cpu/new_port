@@ -67,7 +67,7 @@ function TextScramble() {
   return (
     <section
       ref={rootRef}
-      className="em-scramble rounded-3xl text-5xl "
+      className="em-scramble text-3xl md:text-5xl font-bol "
       data-text={`Hi I'm VANSH VISHWAKARMA`}
       data-charset="symbols"
       data-duration="1.8"

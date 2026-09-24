@@ -19,18 +19,27 @@ const Navbar = () => {
         </a>
 
         {/* NAV LINKS */}
-        <ul className="hidden md:flex gap-8 text-gray-300">
+        <ul className="hidden md:flex gap-8 text-gray-300 ">
 
-          {["Home", "About", "Highlights", "Skills", "Projects", "Contact"].map((item) => (
+          {["Home", "About", "Skills", "Projects", "Highlights", "Contact"].map((item) => (
             <li key={item}>
               <a
                 href={`#${item.toLowerCase()}`}
-                className="hover:text-white transition duration-300"
+                className="hover:text-white transition duration-300 "
               >
                 {item}
+
               </a>
             </li>
+
           ))}
+          <a
+            href="/new_resume.pdf"
+            target="_blank"
+            className="px-4 py-2 bg-blue-500 text-white rounded"
+          >
+            Resume
+          </a>
 
         </ul>
 

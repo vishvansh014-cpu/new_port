@@ -5,7 +5,7 @@ const PhotoCard = () => {
   return (
     <div className="flex justify-end">
 
-      <div className="relative w-[360px] rounded-2xl p-[1px] bg-gradient-to-br from-yellow-300 via-orange-600 to-white">
+      <div className="relative w-[360px] rounded-2xl p-[1px] bg-gradient-to-br from-blue-400 to-blue-500 via-blue-300">
 
         {/* Inner Card */}
         <div className="bg-[#0b0f17]/80 backdrop-blur-xl rounded-2xl p-5 text-white shadow-2xl">
