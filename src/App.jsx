@@ -15,11 +15,44 @@ import { section } from "framer-motion/client";
 import Background from "./components/Background"
 import { SmoothCursor } from "./components/UI/SmoothCursor";
 import Footer from "./components/Footer"
+import IconCloud from "./components/UI/IconCloud";
 
+const techIcons = [
+  // Originally included
+  
+  "javascript",
+  "react",
+  "html5",
+  "css3",
+  "nodedotjs",
+  "express",
+  "nextdotjs",
+  "three.js",
+  "amazonaws",
+  "postgresql",
+  "firebase",
+  "mongodb",
+  "vercel",
+  "docker",
+  "git",
+  "github",
+  "sqlite",
+  
+  "visualstudiocode",
+  
+  "figma",
+  
+  // Newly Added
+  "cplusplus",        // C++
+  "python",           // Python
+  "jupyter",          // Jupyter Notebook
+  "bootstrap",        // Bootstrap
+  "postman",          // Postman
+];
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
-  
+
   useEffect(() => {
     setTimeout(() => {
       setShowIntro(false);
@@ -51,16 +84,19 @@ function App() {
               <About />
             </section>
 
-            <section id="skills" className=" pt-20 pb-12 px-6 max-w-7xl mx-auto flex flex-col justify-start min-h-screen scroll-mt-24 bg-transparent text-white py-20">
-              <Skills />
-              
+            <section id="skills" className=" pt-0 pb-12 px-6 max-w-7xl mx-auto flex flex-col justify-start min-h-screen scroll-mt-24 bg-transparent text-white py-20">
+              <div className="justify-center flex">
+
+                <IconCloud iconSlugs={techIcons} />
+                <Skills />
+              </div>
             </section>
 
             <section id="projects" className=" pt-0 pb-12 px-60 max-w-7xl mx-auto flex flex-col justify-start min-h-screen scroll-mt-24  bg-transparent text-white py-20">
               <Projects />
             </section>
 
-            <section id="highlights" className=" pt-0 pb-12  max-w-7xl mx-auto flex flex-col justify-start min-h-screen scroll-mt-24 bg-transparent text-white py-20">
+            <section id="highlights" className=" pt-0 pb-12 px-6 max-w-7xl mx-auto flex flex-col justify-start min-h-screen scroll-mt-24 bg-transparent text-white py-20">
               <Highlights />
             </section>
 

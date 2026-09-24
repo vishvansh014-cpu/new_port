@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./textScramble.css";
+import { div } from "framer-motion/client";
 
 function TextScramble() {
   const rootRef = useRef(null);
@@ -65,6 +66,7 @@ function TextScramble() {
   }, []);
 
   return (
+    
     <section
       ref={rootRef}
       className="em-scramble text-3xl md:text-5xl font-bol "

@@ -16,13 +16,13 @@ function Skills() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
             >
-                <h1 className="text-3xl md:text-4xl font-bold mb-10 text-center">
+                <h2 className="text-4xl m-5 md:text-5xl font-extrabold tracking-tight">
                     Skills
-                </h1>
+                </h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                
+
                 {/* LANGUAGES - from left */}
                 <motion.div
                     initial={{ opacity: 0, x: -80 }}

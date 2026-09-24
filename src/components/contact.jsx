@@ -16,7 +16,7 @@ function Contact() {
       alert("Message sent!");
     }).catch((error) => {
       console.log(error);
-      
+
     });
   };
 
@@ -33,9 +33,9 @@ function Contact() {
 
           {/* LEFT SIDE */}
           <div className="flex flex-col justify-center">
-            <h1 className="text-black font-bold tracking-widest mb-2 text-2xl">
-              CONTACT
-            </h1>
+            <h2 className="text-4xl m-5 md:text-5xl justify-start flex font-extrabold tracking-tight">
+              Contact
+            </h2>
 
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Let’s Build <br />Intelligent Solutions

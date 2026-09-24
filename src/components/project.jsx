@@ -5,7 +5,9 @@ import { motion } from "framer-motion";
 function projects() {
     return (
         <div className="px-10">
-                <h1 className="text-3xl md:text-4xl font-bold mb-10 text-center">PROJECTS</h1>
+                <h2 className="text-4xl m-5 md:text-5xl justify-center flex font-extrabold tracking-tight">
+                    Projects
+                </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <motion.div
 
