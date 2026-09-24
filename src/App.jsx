@@ -13,6 +13,7 @@ import { useEffect, useState } from "react";
 import { section } from "framer-motion/client";
 // import Particlesbg from "./components/ParticlesBg"
 import Background from "./components/Background"
+import { SmoothCursor } from "./components/UI/SmoothCursor";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <HelloIntro />
       ) : (
         <div className="relative min-h-screen bg-[#030712] text-white">
+          <SmoothCursor />
           <Background />
 
           {/* ✅ ONLY ONE BACKGROUND LAYER */}

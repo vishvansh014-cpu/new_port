@@ -23,3 +23,8 @@ html {
 .new{
   border-radius: 20px;
 }
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
