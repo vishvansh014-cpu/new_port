@@ -1,15 +1,12 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Cloud, fetchSimpleIcons, renderSimpleIcon } from "react-icon-cloud";
 
-// Default cloud canvas options
-const cloudProps = {
+// Dynamic canvas props renderer based on screen size
+const getCloudOptions = (iconSize) => ({
   containerProps: {
+    className: "flex justify-center items-center w-full overflow-hidden max-w-full",
     style: {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      width: "100%",
-      paddingTop: 40,
+      paddingTop: 10,
     },
   },
   options: {
@@ -26,10 +23,10 @@ const cloudProps = {
     maxSpeed: 0.04,
     minSpeed: 0.02,
   },
-};
+});
 
-// Helper function to render simple icons with custom styling
-export const renderCustomIcon = (icon, theme = "dark") => {
+// Helper function to render simple icons with responsive sizing
+export const renderCustomIcon = (icon, iconSize = 42, theme = "dark") => {
   const bgHex = theme === "light" ? "#f3f4f6" : "#080808";
   const fallbackHex = theme === "light" ? "#6e6e73" : "#ffffff";
   const minContrastRatio = theme === "dark" ? 2 : 1.2;
@@ -39,7 +36,7 @@ export const renderCustomIcon = (icon, theme = "dark") => {
     bgHex,
     fallbackHex,
     minContrastRatio,
-    size: 42,
+    size: iconSize,
     aProps: {
       href: undefined,
       target: undefined,
@@ -51,6 +48,24 @@ export const renderCustomIcon = (icon, theme = "dark") => {
 
 export default function IconCloud({ iconSlugs = [] }) {
   const [data, setData] = useState(null);
+  const [iconSize, setIconSize] = useState(42);
+
+  // Responsive Icon Size Handler
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setIconSize(28); // Mobile screen size
+      } else if (window.innerWidth < 1024) {
+        setIconSize(36); // Tablet screen size
+      } else {
+        setIconSize(42); // Desktop screen size
+      }
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // Fetch icon data based on provided simple-icon slugs
   useEffect(() => {
@@ -59,17 +74,19 @@ export default function IconCloud({ iconSlugs = [] }) {
     }
   }, [iconSlugs]);
 
-  // Map fetched icons to interactive cloud nodes
+  // Map fetched icons to interactive cloud nodes with active dynamic iconSize
   const renderedIcons = useMemo(() => {
     if (!data) return null;
     return Object.values(data.simpleIcons).map((icon) =>
-      renderCustomIcon(icon, "dark")
+      renderCustomIcon(icon, iconSize, "dark")
     );
-  }, [data]);
+  }, [data, iconSize]);
 
   return (
-    <Cloud {...cloudProps}>
-      {renderedIcons}
-    </Cloud>
+    <div className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto overflow-hidden px-2">
+      <Cloud {...getCloudOptions(iconSize)}>
+        {renderedIcons}
+      </Cloud>
+    </div>
   );
 }

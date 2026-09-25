@@ -6,57 +6,55 @@ import TextScramble from "./TextScramble.jsx";
 
 function Hero() {
   return (
-    <section className="h-screen relative overflow-hidden bg-transparent">
+    <section className="min-h-[100dvh] relative overflow-hidden bg-transparent flex items-center py-12 md:py-0">
 
-      {/* 🔥 3D BACKGROUND */}
+      {/* 3D BACKGROUND */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
         {/* <ThreeScene /> */}
       </div>
 
-      {/* 🔥 MAIN CONTENT */}
-      <div className="relative z-10 h-full flex items-center justify-center px-6 ">
+      {/* MAIN CONTENT CONTAINER */}
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 md:px-10">
 
-          <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-12">
 
-            {/* LEFT */}
-            <motion.div
-              className="max-w-xl"
-              initial={{ opacity: 0, x: -80 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+          {/* LEFT: TEXT CONTENT */}
+          <motion.div
+            className="w-full max-w-xl text-center md:text-left flex flex-col items-center md:items-start"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <TextScramble />
 
+            <p className="text-gray-300 mt-4 text-base sm:text-lg leading-relaxed max-w-lg">
+              Aspiring AI/ML Engineer passionate about building real-world solutions.
+            </p>
 
-              <TextScramble />
+            <div className="flex gap-4 mt-6 flex-wrap justify-center md:justify-start">
+              <a
+                href="https://github.com/vishvansh014-cpu"
+                className="px-5 py-2.5 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 hover:scale-105 active:scale-95 transition-all duration-200"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
+          </motion.div>
 
-              <p className="text-white mt-4">
-                Aspiring AI/ML Engineer passionate about building real-world solutions.
-              </p>
+          {/* RIGHT: PHOTO CARD */}
+          <motion.div
+            className="w-full flex justify-center md:justify-end"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <Photo />
+          </motion.div>
 
-              <div className="flex gap-4 mt-6 flex-wrap">
-                <a
-                  href="https://github.com/vishvansh014-cpu"
-                  className="px-4 py-2 bg-blue-500 text-white rounded hover:scale-110"
-                  target="_blank"
-                >
-                  GitHub
-                </a>
+        </div>
 
-                
-              </div>
-            </motion.div>
-
-            {/* RIGHT */}
-            <motion.div
-              initial={{ opacity: 0, x: 80 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <Photo />
-            </motion.div>
-
-          </div>
-        
       </div>
     </section>
   );

@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import "./textScramble.css";
-import { div } from "framer-motion/client";
 
 function TextScramble() {
   const rootRef = useRef(null);
 
   useEffect(() => {
     const root = rootRef.current;
+    if (!root) return;
 
     const pools = {
       symbols: "!<>-_\\/[]{}—=+*^?#",
@@ -30,7 +30,7 @@ function TextScramble() {
     const tick = Number(root.dataset.tick);
     const total = Math.max(2, Math.ceil((duration * 1000) / tick));
 
-    const pool = pools[root.dataset.charset];
+    const pool = pools[root.dataset.charset] || pools.symbols;
 
     let frame = 0;
     let timer;
@@ -50,12 +50,14 @@ function TextScramble() {
         .join("");
 
     const step = () => {
-      visual.textContent = render(Math.min(1, frame / total));
+      if (visual) {
+        visual.textContent = render(Math.min(1, frame / total));
+      }
       frame++;
 
       if (frame <= total) {
         timer = setTimeout(step, tick);
-      } else {
+      } else if (visual) {
         visual.textContent = text;
       }
     };
@@ -66,17 +68,16 @@ function TextScramble() {
   }, []);
 
   return (
-    
     <section
       ref={rootRef}
-      className="em-scramble text-3xl md:text-5xl font-bol "
-      data-text={`Hi I'm VANSH VISHWAKARMA`}
+      className="em-scramble w-full max-w-full overflow-hidden"
+      data-text="Hi I'm VANSH VISHWAKARMA"
       data-charset="symbols"
       data-duration="1.8"
       data-tick="100"
     >
-      <h2 className="em-scramble__headline">
-        <span className="em-scramble__visual" />
+      <h2 className="em-scramble__headline text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white break-words">
+        <span className="em-scramble__visual inline-block w-full" />
       </h2>
     </section>
   );

@@ -1,17 +1,19 @@
-// components/magicui/magic-card.jsx
-"use client";
-
 import React, { useCallback } from "react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
+// Internal helper function (no external utils.js file needed)
+function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
 
 export function MagicCard({
   children,
   className = "",
   gradientSize = 200,
-  gradientColor = "#b5f442", // Lime accent matching Alpay Celik theme
-  gradientOpacity = 0.15,
+  gradientColor = "#3b82f6", // Blue glow to match photo card border
+  gradientOpacity = 0.2,
 }) {
   const mouseX = useMotionValue(-gradientSize);
   const mouseY = useMotionValue(-gradientSize);
@@ -35,11 +37,11 @@ export function MagicCard({
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className={cn(
-        "group relative flex size-full overflow-hidden rounded-2xl bg-[#121212] border border-[#262626] text-white transition-colors duration-300",
+        "group relative flex size-full overflow-hidden rounded-2xl bg-[#0b0f17] border border-[#1e293b] text-white",
         className
       )}
     >
-      {/* Background Spotlight Glow */}
+      {/* Dynamic Mouse Spotlight Background */}
       <motion.div
         className="pointer-events-none absolute -inset-px rounded-2xl transition-opacity duration-300 group-hover:opacity-100"
         style={{
@@ -50,7 +52,7 @@ export function MagicCard({
         }}
       />
 
-      {/* Dynamic Border Highlight */}
+      {/* Spotlight Border Glow */}
       <motion.div
         className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{
@@ -64,8 +66,8 @@ export function MagicCard({
         }}
       />
 
-      {/* Inner Card Content */}
-      <div className="relative z-10 w-full p-6">{children}</div>
+      {/* Content Container */}
+      <div className="relative z-10 w-full p-5 flex flex-col h-full">{children}</div>
     </div>
   );
 }

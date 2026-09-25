@@ -1,114 +1,151 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { MagicCard } from './UI/magic-card';
 
 const Highlights = () => {
-    return (
-        <div>
-            <section className="min-h-screen px-10 py-20 bg-gradient-to-r">
+  return (
+    <section className="px-6 md:px-10 py-16 max-w-6xl mx-auto">
+      {/* HEADING */}
+      <div className="mb-12">
+        <p className="text-[#b5f442] text-xs font-mono tracking-widest uppercase">
+          CAREER HIGHLIGHTS
+        </p>
 
-                {/* HEADING */}
-                <div className="mb-16">
-                    <p className="text-green-400 tracking-widest">CAREER HIGHLIGHTS</p>
+        <h1 className="text-4xl md:text-6xl font-bold mt-2 text-white">
+          Highlights
+        </h1>
 
-                    <h1 className="text-5xl text-zinc-50 md:text-6xl font-bold mt-4">
-                        Highlights
-                    </h1>
+        <p className="text-gray-400 mt-3 max-w-2xl text-base leading-relaxed">
+          A snapshot of my journey so far — building skills in software engineering, machine learning, and problem solving.
+        </p>
+      </div>
 
-                    <p className="text-gray-400 mt-4 max-w-2xl">
-                        A snapshot of my journey so far — building skills in software engineering and problem solving.
-                    </p>
-                </div>
+      {/* CARDS GRID */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        {/* Card 1: DSA */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="h-full"
+        >
+          <MagicCard 
+            gradientColor="#60a5fa" 
+            gradientSize={150} 
+            className="p-6 h-full flex flex-col justify-between"
+          >
+            <div>
+              <p className="text-[#b5f442] text-xs font-mono tracking-widest mb-2 uppercase">
+                ACHIEVEMENT
+              </p>
 
-                {/* CARDS */}
-                <div className="grid md:grid-cols-3 gap-8">
-                    {/* Card 1 */}
-                    <motion.div
+              <h2 className="text-xl text-white font-bold mb-3">
+                DSA Problem Solving
+              </h2>
 
-                        initial={{ opacity: 0, scale: 0 }}          // starts invisible and shrunk to 0
-                        whileInView={{ opacity: 1, scale: 1 }}      // grows to full size and visible
-                        transition={{ duration: 1, ease: "easeOut" }}
-                    >
-                        <div className="bg-slate-900/40 backdrop-blur-md border border-slate-800/60 rounded-2xl p-6">
+              <p className="text-white text-sm leading-relaxed mb-6">
+                Practicing Data Structures & Algorithms in C++ with focus on arrays, recursion, and problem-solving for product-based companies.
+              </p>
+            </div>
 
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 text-xs border border-[#b5f442]/40 text-[#63f468] rounded-full bg-[#b5f442]/5">
+                150+ Problems
+              </span>
+              <span className="px-3 py-1 text-xs border border-[#b5f442]/40 text-[#63f468] rounded-full bg-white/5">
+                LeetCode
+              </span>
+              <span className="px-3 py-1 text-xs border border-[#b5f442]/40 text-[#63f468] rounded-full bg-white/5">
+                CodeForces
+              </span>
+            </div>
+          </MagicCard>
+        </motion.div>
 
-                            <p className="text-green-400 text-sm tracking-widest mb-3">
-                                ACHIEVEMENT
-                            </p>
+        {/* Card 2: ML */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
+          className="h-full"
+        >
+          <MagicCard 
+            gradientColor="#60a5fa" 
+            gradientSize={150} 
+            className="p-6 h-full flex flex-col justify-between"
+          >
+            <div>
+              <p className="text-[#b5f442] text-xs font-mono tracking-widest mb-2 uppercase">
+                ACHIEVEMENT
+              </p>
 
-                            <h2 className="text-2xl text-white font-bold mb-4">
-                                DSA Problem Solving
-                            </h2>
+              <h2 className="text-xl text-white font-bold mb-3">
+                ML Sales Analysis
+              </h2>
 
-                            <p className="text-gray-400 mb-6">
-                                Practicing Data Structures & Algorithms in C++ with focus on arrays, recursion, and problem-solving for product-based companies.
-                            </p>
+              <p className="text-white text-sm leading-relaxed mb-6">
+                Built a machine learning project using NumPy, Pandas, and visualization libraries to analyze and extract insights from sales data.
+              </p>
+            </div>
 
-                            <button className="px-4 py-2 border border-green-400 text-green-400 rounded-full">
-                                150+ <br /> Problem
-                            </button>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 text-xs border border-[#b5f442]/40 text-[#63f468] rounded-full bg-[#b5f442]/5">
+                Machine Learning
+              </span>
+              <span className="px-3 py-1 text-xs border border-[#b5f442]/40 text-[#63f468] rounded-full bg-white/5">
+                Data Analysis
+              </span>
+            </div>
+          </MagicCard>
+        </motion.div>
 
-                        </div>
-                    </motion.div>
-                    {/* Card 2 */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0 }}          // starts invisible and shrunk to 0
-                        whileInView={{ opacity: 1, scale: 1 }}      // grows to full size and visible
-                        transition={{ duration: 2, ease: "easeOut" }}
-                    >
-                        <div className="bg-slate-900/40 backdrop-blur-md border border-slate-800/60 rounded-2xl p-6">
+        {/* Card 3: Backend */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+          className="h-full"
+        >
+          <MagicCard 
+            gradientColor="#60a5fa" 
+            gradientSize={150} 
+            className="p-6 h-full flex flex-col justify-between"
+          >
+            <div>
+              <p className="text-[#b5f442] text-xs font-mono tracking-widest mb-2 uppercase">
+                ACHIEVEMENT
+              </p>
 
+              <h2 className="text-xl text-white font-bold mb-3">
+                Short URL Backend
+              </h2>
 
+              <p className="text-white text-sm leading-relaxed mb-6">
+                Developed a URL shortening service using Node.js, Express, and MongoDB with unique short code generation.
+              </p>
+            </div>
 
-                            <p className="text-green-400 text-sm tracking-widest mb-3">
-                                ACHIEVEMENT
-                            </p>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 text-xs border border-[#b5f442]/40 text-[#63f468] rounded-full bg-[#b5f442]/5">
+                MongoDB
+              </span>
+              <span className="px-3 py-1 text-xs border  border-[#b5f442]/40 text-[#63f468] rounded-full bg-white/5">
+                React.js
+              </span>
+              <span className="px-3 py-1 text-xs border  border-[#b5f442]/40 text-[#63f468] rounded-full bg-white/5">
+                Tailwind CSS
+              </span>
+            </div>
+          </MagicCard>
+        </motion.div>
 
-                            <h2 className="text-2xl text-white font-bold mb-4">
-                                ML Sales Analysis
-                            </h2>
+      </div>
+    </section>
+  );
+};
 
-                            <p className="text-gray-400 mb-6">
-                                Built a machine learning project using NumPy, Pandas, and visualization libraries to analyze and extract insights from sales data.
-                            </p>
-
-                            <button className="px-4 py-2 border border-green-400 text-green-400 rounded-full">
-                                TCS Prime
-                            </button>
-
-                        </div>
-                    </motion.div>
-                    {/* Card 3 */}
-                    <motion.div
-
-                        initial={{ opacity: 0, scale: 0 }}          // starts invisible and shrunk to 0
-                        whileInView={{ opacity: 1, scale: 1 }}      // grows to full size and visible
-                        transition={{ duration: 3, ease: "easeOut" }}
-                    >
-                        <div className="bg-slate-900/40 backdrop-blur-md border border-slate-800/60 rounded-2xl p-6">
-
-                            <p className="text-green-400 text-sm tracking-widest mb-3">
-                                ACHIEVEMENT
-                            </p>
-
-                            <h2 className="text-2xl text-white font-bold mb-4">
-                                Short URL Backend
-                            </h2>
-
-                            <p className="text-gray-400 mb-6">
-                                Developed a URL shortening service using Node.js, Express, and MongoDB with unique short code generation.
-                            </p>
-
-                            <button className="px-4 py-2 border border-green-400 text-green-400 rounded-full">
-                                TCS Prime
-                            </button>
-
-                        </div>
-                    </motion.div>
-                </div>
-
-            </section >
-        </div >
-    )
-}
-
-export default Highlights
+export default Highlights;
