@@ -10,7 +10,7 @@ import { MagicCard } from "./UI/magic-card";
 
 function Skills() {
   return (
-    <div className="px-4 sm:px-8 md:px-12 py-12 max-w-6xl mx-auto">
+    <div className="px-0 sm:px-8 md:px-12 py-12 max-w-6xl mx-auto">
       {/* HEADING */}
       <motion.div
         initial={{ opacity: 0, y: -30 }}
@@ -33,9 +33,9 @@ function Skills() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <MagicCard gradientColor="#b5f442" gradientSize={220} className="p-6 h-full">
+          <MagicCard gradientColor="#b5f44240" gradientSize={220} className="p-6 h-full">
             <h3 className="text-xl font-bold text-[#b5f442] mb-4 uppercase font-mono tracking-wider">
-              Languages
+             Programming Languages
             </h3>
             <ul className="space-y-3 text-gray-300 font-medium">
               <li className="flex items-center gap-3">
@@ -61,7 +61,7 @@ function Skills() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <MagicCard gradientColor="#b5f442" gradientSize={220} className="p-6 h-full">
+          <MagicCard gradientColor="#b5f44240" gradientSize={220} className="p-6 h-full">
             <h3 className="text-xl font-bold text-[#b5f442] mb-4 uppercase font-mono tracking-wider">
               AIML
             </h3>
@@ -82,7 +82,7 @@ function Skills() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <MagicCard gradientColor="#b5f442" gradientSize={220} className="p-6 h-full">
+          <MagicCard gradientColor="#b5f44240" gradientSize={220} className="p-6 h-full">
             <h3 className="text-xl font-bold text-[#b5f442] mb-4 uppercase font-mono tracking-wider">
               Web Development
             </h3>
@@ -110,7 +110,7 @@ function Skills() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <MagicCard gradientColor="#b5f442" gradientSize={220} className="p-6 h-full">
+          <MagicCard gradientColor="#b5f44240" gradientSize={220} className="p-6 h-full">
             <h3 className="text-xl font-bold text-[#b5f442] mb-4 uppercase font-mono tracking-wider">
               Tools & Platforms
             </h3>

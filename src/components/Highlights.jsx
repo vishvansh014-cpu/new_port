@@ -32,7 +32,7 @@ const Highlights = () => {
           className="h-full"
         >
           <MagicCard 
-            gradientColor="#60a5fa" 
+            gradientColor="#b5f44240" 
             gradientSize={150} 
             className="p-6 h-full flex flex-col justify-between"
           >
@@ -73,7 +73,7 @@ const Highlights = () => {
           className="h-full"
         >
           <MagicCard 
-            gradientColor="#60a5fa" 
+            gradientColor="#b5f44240" 
             gradientSize={150} 
             className="p-6 h-full flex flex-col justify-between"
           >
@@ -111,7 +111,7 @@ const Highlights = () => {
           className="h-full"
         >
           <MagicCard 
-            gradientColor="#60a5fa" 
+            gradientColor="#b5f44240" 
             gradientSize={150} 
             className="p-6 h-full flex flex-col justify-between"
           >

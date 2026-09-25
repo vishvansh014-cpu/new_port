@@ -81,7 +81,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="hover:scale-110 transition-transform duration-200"
             >
-              <img src={In} alt="LinkedIn" className="w-8 h-8 rounded-full object-cover border border-white/10" />
+              <img src={In} alt="LinkedIn" className="w-11 h-11 rounded-full object-cover border border-white/10" />
             </a>
             <a
               href="https://x.com/vanshvish1412"

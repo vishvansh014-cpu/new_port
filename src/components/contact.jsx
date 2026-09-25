@@ -86,7 +86,7 @@ function Contact() {
               {/* BUTTON */}
               <button
                 type="submit"   // ✅ important
-                className="bg-green-400 text-black py-3 rounded-full font-semibold hover:scale-105 transition"
+                className="bg-[#b5f442] text-black py-3 rounded-full font-semibold hover:scale-105 transition"
               >
                 Send Message ✈️
               </button>

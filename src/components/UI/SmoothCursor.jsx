@@ -12,36 +12,45 @@ export function SmoothCursor() {
   const smoothY = useSpring(cursorY, springConfig);
 
   useEffect(() => {
-    // Check if the device has a primary fine pointer (mouse/trackpad, not touch)
+    // EDITED LINE: Dual check for desktop hardware (fine pointer AND screen width >= 768px)
     const mediaQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
     
-    const checkPointer = () => setIsPointerDevice(mediaQuery.matches);
-    checkPointer(); // Initial check
+    const checkDevice = () => {
+      const isDesktopWidth = window.innerWidth >= 768;
+      // EDITED LINE: Returns true if precision pointer is detected or viewport is desktop width
+      setIsPointerDevice(mediaQuery.matches || isDesktopWidth);
+    };
 
-    // Listen for device changes (e.g. docking a laptop)
-    mediaQuery.addEventListener("change", checkPointer);
+    checkDevice(); // Initial check on mount
 
     const moveCursor = (e) => {
       cursorX.set(e.clientX);
       cursorY.set(e.clientY);
     };
 
-    if (mediaQuery.matches) {
-      window.addEventListener("mousemove", moveCursor);
+    // EDITED LINE: Attach window mousemove event listener directly
+    window.addEventListener("mousemove", moveCursor);
+    window.addEventListener("resize", checkDevice);
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener("change", checkDevice);
     }
 
     return () => {
-      mediaQuery.removeEventListener("change", checkPointer);
       window.removeEventListener("mousemove", moveCursor);
+      window.removeEventListener("resize", checkDevice);
+      if (mediaQuery.removeEventListener) {
+        mediaQuery.removeEventListener("change", checkDevice);
+      }
     };
   }, [cursorX, cursorY]);
 
-  // Completely unmount on smartphones/touch devices
+  // EDITED LINE: Return null on smartphones and touch devices (when width < 768px or no fine pointer)
   if (!isPointerDevice) return null;
 
   return (
     <motion.div
-      className="pointer-events-none fixed left-0 top-0 z-50 hidden md:block"
+      // EDITED LINE: Fixed styling to keep cursor pointer layer visible above all sections
+      className="pointer-events-none fixed left-0 top-0 z-[9999]"
       style={{
         x: smoothX,
         y: smoothY,
@@ -59,7 +68,7 @@ export function SmoothCursor() {
         <path
           d="M3 3l7 18 3-7 7-3L3 3z"
           fill="#000000"
-          stroke="#ffffff"
+          stroke="#f8f9fa"
           strokeWidth="1.5"
           strokeLinejoin="round"
         />

@@ -63,8 +63,8 @@ export default function About() {
               AI/ML
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-white">Focus Area</h3>
-              <p className="text-xs text-slate-400 font-mono">Python, PyTorch, ML Models</p>
+              <h3 className="text-2xl font-bold text-white">Primary Focus</h3>
+              <p className="text-xs text-slate-400 font-mono">Machine Learning,Deep Learning,Generative AI & Agentic AI, </p>
             </div>
           </div>
 
@@ -74,7 +74,7 @@ export default function About() {
               CURRENT STATUS
             </div>
             <p className="text-xs text-slate-300">
-              Open to Software Engineering & AI/ML Opportunities.
+              Open to Web Devlopment & AI/ML Opportunities.
             </p>
           </div>
 

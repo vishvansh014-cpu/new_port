@@ -29,12 +29,12 @@ function Projects() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 1, ease: "easeOut" }}
           // EDITED LINE: Added h-full to motion wrapper so card stretches to full height in grid
           className="h-full"
         >
           <MagicCard 
-            gradientColor="#b5f442" 
+            gradientColor="#b5f44240" 
             gradientSize={220} 
             // EDITED LINE: Added responsive internal card padding (p-5 sm:p-6)
             className="p-5 sm:p-6 h-full flex flex-col justify-between"
@@ -88,12 +88,12 @@ function Projects() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
           // EDITED LINE: Added h-full to motion wrapper so card stretches to full height in grid
           className="h-full"
         >
           <MagicCard 
-            gradientColor="#b5f442" 
+            gradientColor="#b5f44240" 
             gradientSize={220} 
             // EDITED LINE: Added responsive internal card padding (p-5 sm:p-6)
             className="p-5 sm:p-6 h-full flex flex-col justify-between"

@@ -2,11 +2,11 @@ import React from "react";
 import Photo from "./photo_card.jsx";
 import { motion } from "framer-motion";
 import TextScramble from "./TextScramble.jsx";
-// import ThreeScene from "./ThreeScene";
 
 function Hero() {
   return (
-    <section className="min-h-[100dvh] relative overflow-hidden bg-transparent flex items-center py-12 md:py-0">
+    // EDITED LINE: Added id="home", replaced min-h-[100dvh] with fit-content, and added pt-24 md:pt-28 to offset fixed navbar
+    <section id="home" className="relative w-full overflow-hidden bg-transparent pt-24 md:pt-28 pb-12">
 
       {/* 3D BACKGROUND */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
@@ -16,7 +16,8 @@ function Hero() {
       {/* MAIN CONTENT CONTAINER */}
       <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 md:px-10">
 
-        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-12">
+        {/* EDITED LINE: Reduced column layout gap (gap-6 md:gap-10) */}
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-6 md:gap-10">
 
           {/* LEFT: TEXT CONTENT */}
           <motion.div
@@ -27,14 +28,16 @@ function Hero() {
           >
             <TextScramble />
 
-            <p className="text-gray-300 mt-4 text-base sm:text-lg leading-relaxed max-w-lg">
+            {/* EDITED LINE: Reduced top margin from mt-4 to mt-3 */}
+            <p className="text-gray-300 mt-3 text-base sm:text-lg leading-relaxed max-w-lg">
               Aspiring AI/ML Engineer passionate about building real-world solutions.
             </p>
 
-            <div className="flex gap-4 mt-6 flex-wrap justify-center md:justify-start">
+            {/* EDITED LINE: Updated CTA button to match lime accent theme (#b5f442) & reduced top margin to mt-5 */}
+            <div className="flex gap-4 mt-5 flex-wrap justify-center md:justify-start">
               <a
                 href="https://github.com/vishvansh014-cpu"
-                className="px-5 py-2.5 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 hover:scale-105 active:scale-95 transition-all duration-200"
+                className="px-5 py-2.5 bg-[#b5f442] text-black font-semibold rounded-lg hover:bg-[#a1e32d] active:scale-95 transition-all duration-200"
                 target="_blank"
                 rel="noopener noreferrer"
               >

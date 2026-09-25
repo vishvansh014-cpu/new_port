@@ -7,7 +7,7 @@ const PhotoCard = () => {
     <div className="flex justify-end">
       {/* MagicCard Wrapper */}
       <MagicCard
-        gradientColor="#60a5fa"
+        gradientColor="#b5f44240"
         gradientSize={150}
         className="w-[360px] p-0"
       >

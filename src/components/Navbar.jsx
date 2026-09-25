@@ -44,7 +44,7 @@ const Navbar = () => {
           <img
             src={avatarImg}
             alt="Vansh Vishwakarma"
-            className="w-10 h-10 rounded-full object-cover transition-transform duration-300 group-hover:scale-110 border border-[#b5f442]/30"
+            className="w-10 h-10 rounded-full object-cover transition-transform duration-300 group-hover:scale-150 border border-black"
           />
           {/* EDITED LINE: Made subtitle responsive */}
           <span className="text-white font-semibold text-sm leading-tight">
