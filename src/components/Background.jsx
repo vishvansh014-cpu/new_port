@@ -1,99 +1,146 @@
-import React, { useRef, useMemo } from 'react';
-import { Canvas, useFrame, extend } from '@react-three/fiber';
-import * as THREE from 'three';
+import React, { useEffect, useRef } from 'react';
 
-// 1. Define the Custom Shader Material
-class AuroraMaterial extends THREE.ShaderMaterial {
-  constructor() {
-    super({
-      // We need time for animation and screen resolution for aspect ratio
-      uniforms: {
-        uTime: { value: 0 },
-        uColorA: { value: new THREE.Color("#0f172a") }, // Deep Blue/Black
-        uColorB: { value: new THREE.Color("#38bdf8") }, // Cyan
-        uResolution: { value: new THREE.Vector2() },
-      },
-      // Vertex shader: pass the position/uv through
-      vertexShader: `
-        varying vec2 vUv;
-        void main() {
-          vUv = uv;
-          gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-        }
-      `,
-      // Fragment shader: The magic happens here (uses simplified FBM noise)
-      fragmentShader: `
-        uniform float uTime;
-        uniform vec3 uColorA;
-        uniform vec3 uColorB;
-        varying vec2 vUv;
+const GRID_SIZE = 48; // Size of each grid square in px
 
-        // Basic noise function
-        float rand(vec2 n) { 
-          return fract(sin(dot(n, vec2(12.9898, 4.1414))) * 43758.5453);
-        }
+export default function Background({ children }) {
+  const canvasRef = useRef(null);
 
-        float noise(vec2 n) {
-          const vec2 d = vec2(0.0, 1.0);
-          vec2 b = floor(n), f = smoothstep(vec2(0.0), vec2(1.0), fract(n));
-          return mix(mix(rand(b), rand(b + d.yx), f.x), mix(rand(b + d.xy), rand(b + d.yy), f.x), f.y);
-        }
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
 
-        void main() {
-          // Subtle, drifting noise
-          vec2 tUv = vUv * 2.0; // Scale the noise
-          float n = noise(tUv + uTime * 0.05); // Drifting
-          n += noise(tUv * 2.0 - uTime * 0.02) * 0.5; // Layering
+    let animationFrameId;
+    let hoveredCell = null;
+    let activeSquares = [];
 
-          // Mix colors based on noise value
-          vec3 finalColor = mix(uColorA, uColorB, n * 0.35); // Keep contrast low
+    // Resize canvas to match full viewport dimensions
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
 
-          // Subtle vignette fade at edges
-          float vignette = 1.0 - smoothstep(0.4, 1.1, length(vUv - 0.5));
-          
-          gl_FragColor = vec4(finalColor * vignette, 1.0);
-        }
-      `,
-      transparent: true,
-      depthWrite: false, // Don't block background
-    });
-  }
-}
+    handleResize();
+    window.addEventListener('resize', handleResize);
 
-// 2. Extend THREE so we can use <auroraMaterial /> in JSX
-extend({ AuroraMaterial });
+    // Track mouse position relative to grid
+    const handleMouseMove = (e) => {
+      const col = Math.floor(e.clientX / GRID_SIZE);
+      const row = Math.floor(e.clientY / GRID_SIZE);
+      hoveredCell = { col, row };
+    };
 
-function BackgroundScene() {
-  const materialRef = useRef();
+    const handleMouseLeave = () => {
+      hoveredCell = null;
+    };
 
-  useFrame((state) => {
-    // Update the 'time' uniform every frame for animation
-    if (materialRef.current) {
-      materialRef.current.uniforms.uTime.value = state.clock.elapsedTime;
-    }
-  });
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseleave', handleMouseLeave);
+
+    // Periodically generate random ambient flashing squares
+    const interval = setInterval(() => {
+      const cols = Math.ceil(canvas.width / GRID_SIZE);
+      const rows = Math.ceil(canvas.height / GRID_SIZE);
+
+      const count = Math.floor(Math.random() * 2) + 1;
+      for (let i = 0; i < count; i++) {
+        activeSquares.push({
+          col: Math.floor(Math.random() * cols),
+          row: Math.floor(Math.random() * rows),
+          opacity: Math.random() * 0.25 + 0.1,
+          life: 1.0, // Initial life for fade-out
+        });
+      }
+    }, 350);
+
+    // Main Canvas Render Loop
+    const render = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const cols = Math.ceil(canvas.width / GRID_SIZE);
+      const rows = Math.ceil(canvas.height / GRID_SIZE);
+
+      // 1. Draw Mouse Hover Effect
+      if (hoveredCell) {
+        ctx.fillStyle = '#b5f442';
+        ctx.globalAlpha = 0.35; // Brightness when cursor hovers
+        ctx.fillRect(
+          hoveredCell.col * GRID_SIZE + 1,
+          hoveredCell.row * GRID_SIZE + 1,
+          GRID_SIZE - 1,
+          GRID_SIZE - 1
+        );
+      }
+
+      // 2. Draw Random Flashing Squares
+      activeSquares.forEach((sq) => {
+        ctx.fillStyle = '#b5f442';
+        ctx.globalAlpha = sq.opacity * sq.life;
+        ctx.fillRect(
+          sq.col * GRID_SIZE + 1,
+          sq.row * GRID_SIZE + 1,
+          GRID_SIZE - 1,
+          GRID_SIZE - 1
+        );
+
+        // Slowly decrease life for smooth fade
+        sq.life -= 0.012;
+      });
+
+      // Filter out faded squares
+      activeSquares = activeSquares.filter((sq) => sq.life > 0);
+
+      // 3. Draw Grid Lines
+      ctx.globalAlpha = 0.12;
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 1;
+
+      ctx.beginPath();
+      for (let x = 0; x <= canvas.width; x += GRID_SIZE) {
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
+      }
+      for (let y = 0; y <= canvas.height; y += GRID_SIZE) {
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+      }
+      ctx.stroke();
+
+      animationFrameId = requestAnimationFrame(render);
+    };
+
+    render();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseleave', handleMouseLeave);
+      clearInterval(interval);
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
 
   return (
-    <mesh scale={[1, 1, 1]}>
-      {/* Plane covering the screen */}
-      <planeGeometry args={[20, 20]} />
-      <auroraMaterial ref={materialRef} />
-    </mesh>
-  );
-}
-
-export default function AuroraCanvas() {
-  return (
-    <div className="fixed inset-0 w-screen h-screen pointer-events-none z-0 bg-[#030712]">
-      {/* Optional overlay gradient for softer edges */}
-      <div 
-        className="absolute inset-0 pointer-events-none z-10" 
-        style={{ background: 'linear-gradient(to bottom, transparent, #030712 95%)' }} 
+    <div className="relative min-h-screen w-full bg-[#080808] text-white font-sans">
+      {/* Canvas Fixed Background Layer */}
+      <canvas
+        ref={canvasRef}
+        className="fixed inset-0 z-0 pointer-events-none"
       />
-      
-      <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
-        <BackgroundScene />
-      </Canvas>
+
+      {/* Radial Depth Gradient */}
+      <div
+        className="fixed inset-0 z-0 pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(circle at 30% 20%, rgba(181, 244, 66, 0.03) 0%, rgba(8, 8, 8, 0.75) 75%)',
+        }}
+      />
+
+      {/* Foreground Content */}
+      <div className="relative z-10 w-full min-h-screen">
+        {children}
+      </div>
     </div>
   );
-}
+} 

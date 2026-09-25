@@ -14,14 +14,6 @@ export default function About() {
         
         {/* Terminal Bio Card */}
         <div className="lg:col-span-2 bg-slate-900/50 border border-slate-800 rounded-2xl p-6 backdrop-blur-md shadow-2xl">
-          <div className="flex items-center gap-2 pb-4 mb-4 border-b border-slate-800/80 font-mono text-xs text-slate-400">
-            <div className="w-3 h-3 rounded-full bg-red-500/80" />
-            <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-            <div className="w-3 h-3 rounded-full bg-green-500/80" />
-            <span className="ml-2 text-slate-400 font-mono">
-              vansh@system:~
-            </span>
-          </div>
 
           <div className="space-y-4 text-slate-300 text-base leading-relaxed">
             <p>

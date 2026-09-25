@@ -27,3 +27,15 @@ html, body {
   -ms-overflow-style: none; /* IE and Edge */
   overflow-y: scroll; /* Preserves scroll capability */
 }
+@keyframes fadeOut {
+  0% {
+    opacity: var(--tw-opacity, 0.2);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-fade-out {
+  animation: fadeOut 2.5s cubic-bezier(0.4, 0, 0.6, 1) forwards;
+}

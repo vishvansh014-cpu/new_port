@@ -14,40 +14,53 @@ import { section } from "framer-motion/client";
 // import Particlesbg from "./components/ParticlesBg"
 import Background from "./components/Background"
 import { SmoothCursor } from "./components/UI/SmoothCursor";
+
 import Footer from "./components/Footer"
 import IconCloud from "./components/UI/IconCloud";
 
+
 const techIcons = [
-  // Originally included
-  
+  // Frontend
   "javascript",
   "react",
   "html5",
   "css3",
+  "bootstrap",
+  "three.js",
+
+  // Backend
   "nodedotjs",
   "express",
   "nextdotjs",
-  "three.js",
-  "amazonaws",
-  "postgresql",
-  "firebase",
+
+  // Databases
   "mongodb",
-  "vercel",
-  "docker",
-  "git",
-  "github",
+  "postgresql",
   "sqlite",
   
+
+  // Cloud & DevOps
+  
+  "vercel",
+  "docker",
+
+  // Tools
+  "git",
+  "github",
+  "postman",
   "visualstudiocode",
-  
   "figma",
-  
-  // Newly Added
-  "cplusplus",        // C++
-  "python",           // Python
-  "jupyter",          // Jupyter Notebook
-  "bootstrap",        // Bootstrap
-  "postman",          // Postman
+
+  // Programming Languages
+  "cplusplus",
+  "python",
+
+  // AIML / Data Science
+  "jupyter",
+  "numpy",
+  "pandas",
+  "matplotlib",
+  "seaborn"
 ];
 
 function App() {
