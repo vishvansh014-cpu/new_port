@@ -34,7 +34,7 @@ function Skills() {
           transition={{ duration: 0.6 }}
         >
           <MagicCard gradientColor="#b5f44240" gradientSize={220} className="p-6 h-full">
-            <h3 className="text-xl font-bold text-[#b5f442] mb-4 uppercase font-mono tracking-wider">
+            <h3 className="text-xl font-bold text-[#D4F23F] mb-4 uppercase font-mono tracking-wider">
              Programming Languages
             </h3>
             <ul className="space-y-3 text-gray-300 font-medium">
@@ -62,7 +62,7 @@ function Skills() {
           transition={{ duration: 0.6 }}
         >
           <MagicCard gradientColor="#b5f44240" gradientSize={220} className="p-6 h-full">
-            <h3 className="text-xl font-bold text-[#b5f442] mb-4 uppercase font-mono tracking-wider">
+            <h3 className="text-xl font-bold text-[#D4F23F] mb-4 uppercase font-mono tracking-wider">
               AIML
             </h3>
             <div className="flex flex-wrap gap-2 text-sm">
@@ -83,7 +83,7 @@ function Skills() {
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <MagicCard gradientColor="#b5f44240" gradientSize={220} className="p-6 h-full">
-            <h3 className="text-xl font-bold text-[#b5f442] mb-4 uppercase font-mono tracking-wider">
+            <h3 className="text-xl font-bold text-[#D4F23F] mb-4 uppercase font-mono tracking-wider">
               Web Development
             </h3>
             <ul className="space-y-3 text-gray-300 font-medium">
@@ -111,7 +111,7 @@ function Skills() {
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <MagicCard gradientColor="#b5f44240" gradientSize={220} className="p-6 h-full">
-            <h3 className="text-xl font-bold text-[#b5f442] mb-4 uppercase font-mono tracking-wider">
+            <h3 className="text-xl font-bold text-[#D4F23F] mb-4 uppercase font-mono tracking-wider">
               Tools & Platforms
             </h3>
             <div className="flex flex-wrap gap-2 text-sm">
