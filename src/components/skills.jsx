@@ -2,7 +2,7 @@ import React from 'react';
 import python from "../assets/python.png";
 import Cpp from "../assets/c++.png";
 import JavaScript from "../assets/js.webp";
-import ract from "../assets/r.png";
+import ract from "../assets/R.png";
 import node from "../assets/node.png";
 import express from "../assets/ex.png";
 import { motion } from "framer-motion";

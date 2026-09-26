@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import "./textScramble.css";
+// import "./textScramble.css";
 
 function TextScramble() {
   const rootRef = useRef(null);
