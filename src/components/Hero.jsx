@@ -37,7 +37,7 @@ function Hero() {
             <div className="flex gap-4 mt-5 flex-wrap justify-center md:justify-start">
               <a
                 href="https://github.com/vishvansh014-cpu"
-                className="px-5 py-2.5 bg-[#b5f442] text-black font-semibold rounded-lg hover:bg-[#a1e32d] active:scale-95 transition-all duration-200"
+                className="px-5 py-2.5 bg-[#D4F23F] text-black font-semibold rounded-lg hover:bg-[#D4F23F] active:scale-95 transition-all duration-200"
                 target="_blank"
                 rel="noopener noreferrer"
               >

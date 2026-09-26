@@ -23,6 +23,7 @@
     "framer-motion": "^13.4.4",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
+    "react-github-calendar": "^5.0.9",
     "react-icon-cloud": "^4.1.7",
     "react-type-animation": "^3.2.0",
     "tailwind": "^4.0.0",

@@ -34,14 +34,7 @@ export default function About() {
             >
               LinkedIn
             </a>
-            <a
-              href="https://github.com/vishvansh014-cpu"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-slate-800 border border-slate-700 text-slate-300 rounded-lg text-xs font-mono hover:bg-slate-700 transition-all"
-            >
-              GitHub
-            </a>
+          
           </div>
         </div>
 
@@ -59,7 +52,7 @@ export default function About() {
           </div>
 
           <div className="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-5 backdrop-blur-md flex items-center gap-4">
-            <div className="px-3 py-2 bg-purple-500/10 border border-purple-500/20 rounded-xl text-purple-400 font-mono text-xs font-bold">
+            <div className="px-3 py-2 bg-purple-500/10 border border-purple-500/20 rounded-xl text-[#D4F23F] font-mono text-xs font-bold">
               AI/ML
             </div>
             <div>

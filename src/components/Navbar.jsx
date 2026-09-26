@@ -49,7 +49,7 @@ const Navbar = () => {
           {/* EDITED LINE: Made subtitle responsive */}
           <span className="text-white font-semibold text-sm leading-tight">
             Vansh Vishwakarma
-            <span className="block text-xs font-mono text-[#b5f442]">AIML Engineer</span>
+            <span className="block text-xs font-mono text-[#D4F23F]">AIML Engineer</span>
           </span>
         </a>
 
@@ -66,7 +66,7 @@ const Navbar = () => {
                   
                   className={`px-3.5 py-1.5 rounded-full transition-all duration-300 text-sm font-medium ${
                     isActive
-                      ? "text-black bg-[#b5f442] font-semibold shadow-[0_0_15px_rgba(181,244,66,0.4)]"
+                      ? "text-black bg-[#D4F23F] font-semibold shadow-[0_0_15px_rgba(181,244,66,0.4)]"
                       : "hover:text-white text-gray-400 hover:bg-white/5"
                   }`}
                 >
@@ -82,7 +82,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               
-              className="ml-2 px-4 py-1.5 border border-[#b5f442] text-[#b5f442] hover:bg-[#b5f442] hover:text-black rounded-full transition-all duration-300 text-sm font-semibold inline-block"
+              className="ml-2 px-4 py-1.5 border border-[#D4F23F] text-[#D4F23F] hover:bg-[#D4F23F] hover:text-black rounded-full transition-all duration-300 text-sm font-semibold inline-block"
             >
               Resume
             </a>
@@ -124,7 +124,7 @@ const Navbar = () => {
                     href={`#${id}`}
                     onClick={() => setMobileMenuOpen(false)}
                     className={`block py-2 text-base font-medium transition-colors ${
-                      isActive ? "text-[#b5f442] font-semibold" : "text-gray-300 hover:text-white"
+                      isActive ? "text-[#D4F23F] font-semibold" : "text-gray-300 hover:text-white"
                     }`}
                   >
                     {item}
@@ -139,7 +139,7 @@ const Navbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block w-full text-center py-2.5 border border-[#b5f442] text-[#b5f442] rounded-xl font-semibold text-sm"
+                className="block w-full text-center py-2.5 border border-[#D4F23F] text-[#D4F23F] rounded-xl font-semibold text-sm"
               >
                 Resume
               </a>
