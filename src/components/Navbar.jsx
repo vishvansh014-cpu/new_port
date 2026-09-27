@@ -75,18 +75,6 @@ const Navbar = () => {
               </li>
             );
           })}
-
-          <li>
-            <a
-              href="/new_resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              
-              className="ml-2 px-4 py-1.5 border border-[#D4F23F] text-[#D4F23F] hover:bg-[#D4F23F] hover:text-black rounded-full transition-all duration-300 text-sm font-semibold inline-block"
-            >
-              Resume
-            </a>
-          </li>
         </ul>
 
         {/* EDITED LINE: Mobile Menu Toggle Button (Using Pure Inline SVG) */}

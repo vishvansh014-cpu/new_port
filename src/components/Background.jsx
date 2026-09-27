@@ -121,7 +121,7 @@ export default function Background({ children }) {
   }, []);
 
   return (
-    <div className="relative min-h-screen w-full bg-[#080808] text-white font-sans">
+    <div className="relative w-full bg-[#080808] text-white font-sans">
       {/* Canvas Fixed Background Layer */}
       <canvas
         ref={canvasRef}
@@ -138,7 +138,7 @@ export default function Background({ children }) {
       />
 
       {/* Foreground Content */}
-      <div className="relative z-10 w-full min-h-screen">
+      <div className="relative z-10 w-full ">
         {children}
       </div>
     </div>
