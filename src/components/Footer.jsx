@@ -40,7 +40,7 @@ export default function Footer() {
           <div className="flex flex-wrap gap-3 w-full sm:w-auto">
             <a
               href={`mailto:${email}`}
-              className="flex-1 sm:flex-initial text-center px-5 py-2.5 bg-[#b5f442] text-black font-semibold rounded-xl text-sm hover:bg-[#a1e32d] active:scale-95 transition-all duration-200"
+              className="flex-1 sm:flex-initial text-center px-5 py-2.5 bg-[#D4F23F] text-black font-semibold rounded-xl text-sm hover:bg-[#D4F23F] active:scale-95 transition-all duration-200"
             >
               Connect
             </a>

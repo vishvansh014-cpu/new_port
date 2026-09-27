@@ -94,7 +94,7 @@ function Contact() {
                 name="email"
                 placeholder="where.can.i@reach.you"
                 required
-                className="w-full bg-[#141416] border border-neutral-800 rounded-lg p-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-[#a8ff35] transition"
+                className="w-full bg-[#141416] border border-neutral-800 rounded-lg p-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-[#D4F23F] transition"
               />
             </div>
 
@@ -105,7 +105,7 @@ function Contact() {
               </label>
               <select
                 name="subject"
-                className="w-full bg-[#141416] border border-neutral-800 rounded-lg p-3 text-sm text-neutral-300 focus:outline-none focus:border-[#a8ff35] transition cursor-pointer"
+                className="w-full bg-[#141416] border border-neutral-800 rounded-lg p-3 text-sm text-neutral-300 focus:outline-none focus:border-[#D4F23F] transition cursor-pointer"
               >
                 <option value="General Inquiry">I need help with a project...</option>
                 <option value="Job Opportunity">Full-time / Freelance role</option>
@@ -124,7 +124,7 @@ function Contact() {
                 rows="4"
                 placeholder="What's it about? A few sentences of context are plenty."
                 required
-                className="w-full bg-[#141416] border border-neutral-800 rounded-lg p-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-[#a8ff35] transition resize-none"
+                className="w-full bg-[#141416] border border-neutral-800 rounded-lg p-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-[#D4F23F] transition resize-none"
               />
             </div>
 
@@ -134,7 +134,7 @@ function Contact() {
                 type="checkbox"
                 id="consent"
                 required
-                className="mt-1 accent-[#a8ff35] cursor-pointer"
+                className="mt-1 accent-[#D4F23F] cursor-pointer"
               />
               <label htmlFor="consent" className="text-xs text-neutral-400 leading-relaxed cursor-pointer">
                 I agree that Vishvansh may store my name and email address to reply to this message.
@@ -145,7 +145,7 @@ function Contact() {
             <button
               type="submit"
               disabled={loading}
-              className="mt-2 w-full bg-[#D4F23F] text-black font-semibold py-3 px-6 rounded-lg hover:bg-[#b8ff52] transition-colors disabled:opacity-50"
+              className="mt-2 w-full bg-[#D4F23F] text-black font-semibold py-3 px-6 rounded-lg hover:bg-[#D4F23F] transition-colors disabled:opacity-50"
             >
               {loading ? "Sending..." : "Send Message ✈️"}
             </button>
