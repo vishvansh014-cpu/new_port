@@ -3,7 +3,7 @@ import Hero from "./components/Hero";
 import About from "./components/about";
 import Skills from "./components/skills";
 import Projects from "./components/project";
-import Contact from "./components/contact";
+
 import Highlights from "./components/Highlights";
 import "./App.css";
 import HelloIntro from "./components/hello";
@@ -14,6 +14,7 @@ import { SmoothCursor } from "./components/UI/SmoothCursor";
 import Footer from "./components/Footer";
 import IconCloud from "./components/UI/IconCloud";
 import Github from "./components/GithubGraph";
+import ContactForm from './components/ContactForm';
 
 const techIcons = [
   "javascript",
@@ -145,7 +146,8 @@ function App() {
               id="contact"
               className="py-12 px-6 max-w-7xl mx-auto flex flex-col justify-center min-h-screen scroll-mt-24 text-white"
             >
-              <Contact />
+              
+              <ContactForm />
             </section>
 
             <Footer />
