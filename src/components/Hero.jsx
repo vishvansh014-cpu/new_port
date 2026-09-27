@@ -6,7 +6,7 @@ import TextScramble from "./TextScramble.jsx";
 function Hero() {
   return (
     // EDITED LINE: Added id="home", replaced min-h-[100dvh] with fit-content, and added pt-24 md:pt-28 to offset fixed navbar
-    <section id="home" className="relative w-full overflow-hidden bg-transparent pt-24 md:pt-28 pb-12">
+    <section id="home" className="relative w-full overflow-hidden bg-transparent pt-24 md:pt-28 pb-12 ">
 
       {/* 3D BACKGROUND */}
       <div className="absolute inset-0 -z-10 pointer-events-none">

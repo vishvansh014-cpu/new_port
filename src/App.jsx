@@ -96,7 +96,7 @@ function App() {
             {/* HERO SECTION - Fixed top spacing */}
             <section
               id="home"
-              className="pt-28 pb-12 px-6 max-w-7xl mx-auto flex flex-col justify-center min-h-[calc(100vh-80px)] scroll-mt-24 text-white"
+              className="min-h-screen flex items-center justify-center px-6 max-w-7xl mx-auto text-white"
             >
               <Hero />
             </section>
@@ -104,22 +104,22 @@ function App() {
             {/* ABOUT SECTION */}
             <section
               id="about"
-              className="py-12 px-6 max-w-7xl mx-auto flex flex-col justify-center min-h-screen scroll-mt-24 text-white"
+              className="min-h-screen flex items-center justify-center px-6 max-w-7xl mx-auto text-white"
             >
               <About />
             </section>
 
             {/* GITHUB GRAPH SECTION */}
-            <section className="py-12 px-6 max-w-7xl mx-auto text-white">
+            <section className="min-h-screen flex items-center justify-center px-6 max-w-7xl mx-auto text-white">
               <Github />
             </section>
 
             {/* SKILLS SECTION */}
             <section
               id="skills"
-              className="py-12 px-6 max-w-7xl mx-auto flex flex-col justify-center min-h-screen scroll-mt-24 text-white"
+              className="min-h-screen flex items-center justify-center px-6 max-w-8xl mx-auto text-white"
             >
-              <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
+              <div className="flex flex-col lg:flex-row items-center justify-center gap-1">
                 <IconCloud iconSlugs={techIcons} />
                 <Skills />
               </div>
@@ -128,7 +128,7 @@ function App() {
             {/* PROJECTS SECTION */}
             <section
               id="projects"
-              className="py-12 px-4 sm:px-6 max-w-7xl mx-auto flex flex-col justify-center min-h-screen scroll-mt-24 text-white"
+              className="min-h-screen flex items-center justify-center px-6 max-w-7xl mx-auto text-white"
             >
               <Projects />
             </section>
@@ -136,7 +136,7 @@ function App() {
             {/* HIGHLIGHTS SECTION */}
             <section
               id="highlights"
-              className="py-12 px-6 max-w-7xl mx-auto flex flex-col justify-center min-h-screen scroll-mt-24 text-white"
+              className="min-h-screen flex items-center justify-center px-6 max-w-7xl mx-auto text-white"
             >
               <Highlights />
             </section>
@@ -144,7 +144,7 @@ function App() {
             {/* CONTACT SECTION */}
             <section
               id="contact"
-              className="py-12 px-6 max-w-7xl mx-auto flex flex-col justify-center min-h-screen scroll-mt-24 text-white"
+              className="min-h-screen flex items-center justify-center px-6 max-w-7xl mx-auto text-white"
             >
               
               <ContactForm />

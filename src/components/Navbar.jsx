@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 // EDITED LINE: Fixed asset pathing for Vite bundled builds
 import avatarImg from "../assets/vansh.png";
 
-const navItems = ["Home", "About", "Skills", "Projects", "Highlights", "Contact"];
+const navItems = ["Home", "About", "Skills" ,"Projects", "Highlights", "Contact"];
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
