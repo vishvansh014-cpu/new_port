@@ -30,7 +30,10 @@ function Hero() {
 
             {/* EDITED LINE: Reduced top margin from mt-4 to mt-3 */}
             <p className="text-gray-300 mt-3 text-base sm:text-lg leading-relaxed max-w-lg">
-              Aspiring AI/ML Engineer passionate about building real-world solutions.
+              AIML Engineer focused on building scalable backend systems and solving real-world problems using machine learning.
+            </p>
+            <p className="text-gray-300 mt-3 text-base sm:text-lg leading-relaxed max-w-lg">
+              I build practical projects combining AI/ML and backend development — from data-driven insights to full-stack applications. Currently focused on Data Structures & Algorithms and production-ready projects to prepare for top tech roles.
             </p>
 
             {/* EDITED LINE: Updated CTA button to match lime accent theme (#b5f442) & reduced top margin to mt-5 */}

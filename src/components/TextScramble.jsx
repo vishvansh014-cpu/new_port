@@ -71,7 +71,7 @@ function TextScramble() {
     <section
       ref={rootRef}
       className="em-scramble w-full max-w-full overflow-hidden"
-      data-text="Hi I'm VANSH VISHWAKARMA"
+      data-text="VANSH VISHWAKARMA"
       data-charset="symbols"
       data-duration="1.8"
       data-tick="100"

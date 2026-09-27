@@ -51,13 +51,13 @@ const Highlights = () => {
             </div>
 
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 text-xs border border-[#b5f442]/40 text-[#D4F23F] rounded-full bg-[#b5f442]/5">
+              <span className="px-3 py-1 text-xs border border-[#b5f442]/40 text-[#81f63e] rounded-full bg-[#b5f442]/5">
                 150+ Problems
               </span>
-              <span className="px-3 py-1 text-xs border border-[#b5f442]/40 text-[#D4F23F] rounded-full bg-white/5">
+              <span className="px-3 py-1 text-xs border border-[#b5f442]/40 text-[#81f63e] rounded-full bg-white/5">
                 LeetCode
               </span>
-              <span className="px-3 py-1 text-xs border border-[#b5f442]/40 text-[#D4F23F] rounded-full bg-white/5">
+              <span className="px-3 py-1 text-xs border border-[#b5f442]/40 text-[#81f63e] rounded-full bg-white/5">
                 CodeForces
               </span>
             </div>
@@ -92,10 +92,10 @@ const Highlights = () => {
             </div>
 
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 text-xs border border-[#b5f442]/40 text-[#D4F23F] rounded-full bg-[#b5f442]/5">
+              <span className="px-3 py-1 text-xs border border-[#b5f442]/40 text-[#81f63e] rounded-full bg-[#b5f442]/5">
                 Machine Learning
               </span>
-              <span className="px-3 py-1 text-xs border border-[#b5f442]/40 text-[#D4F23F] rounded-full bg-white/5">
+              <span className="px-3 py-1 text-xs border border-[#b5f442]/40 text-[#81f63e] rounded-full bg-white/5">
                 Data Analysis
               </span>
             </div>
@@ -130,13 +130,13 @@ const Highlights = () => {
             </div>
 
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 text-xs border border-[#b5f442]/40 text-[#D4F23F] rounded-full bg-[#b5f442]/5">
+              <span className="px-3 py-1 text-xs border border-[#b5f442]/40 text-[#81f63e] rounded-full bg-[#b5f442]/5">
                 MongoDB
               </span>
-              <span className="px-3 py-1 text-xs border  border-[#b5f442]/40 text-[#D4F23F] rounded-full bg-white/5">
+              <span className="px-3 py-1 text-xs border  border-[#b5f442]/40 text-[#81f63e] rounded-full bg-white/5">
                 React.js
               </span>
-              <span className="px-3 py-1 text-xs border  border-[#b5f442]/40 text-[#D4F23F] rounded-full bg-white/5">
+              <span className="px-3 py-1 text-xs border  border-[#b5f442]/40 text-[#81f63e] rounded-full bg-white/5">
                 Tailwind CSS
               </span>
             </div>
