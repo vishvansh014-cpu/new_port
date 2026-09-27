@@ -51,7 +51,7 @@ function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               
-              className="ml-2 px-4 py-2.5 border-2 border-[#D4F23F] text-[#D4F23F] hover:bg-[#D4F23F] hover:text-black rounded-full transition-all duration-300 text-sm font-semibold inline-block"
+              className="ml-2 px-4 py-2.5 border-2 border-[#D4F23F] text-[#D4F23F] hover:bg-[#D4F23F] hover:text-black rounded-lg transition-all duration-300 text-sm font-semibold inline-block"
             >
               Resume
             </a>
