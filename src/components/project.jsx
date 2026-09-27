@@ -74,7 +74,7 @@ function Projects() {
                 href="https://github.com/vishvansh014-cpu/todo_webPage"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[#b5f442] hover:text-[#a1e32d] hover:translate-x-1 transition-all duration-200 focus:outline-none"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#D4F23F] hover:text-[#D4F23F] hover:translate-x-1 transition-all duration-200 focus:outline-none"
               >
                 <span>View Source Code</span>
                 <span>&rarr;</span>
@@ -103,7 +103,7 @@ function Projects() {
               {/* EDITED LINE: Flex-wrap header allows long title or badge to drop down on small screens without overlapping */}
               <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
                 <h3 className="text-xl sm:text-2xl font-bold text-white">Short URL</h3>
-                <span className="text-xs font-mono text-[#b5f442] border border-[#b5f442]/30 bg-[#b5f442]/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                <span className="text-xs font-mono text-[#D4F23F] border border-[#b5f442]/30 bg-[#b5f442]/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
                   BACKEND
                 </span>
               </div>
@@ -133,7 +133,7 @@ function Projects() {
                 href="https://github.com/vishvansh014-cpu/CodeAlpha_ProjectName"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[#b5f442] hover:text-[#a1e32d] hover:translate-x-1 transition-all duration-200 focus:outline-none"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#D4F23F] hover:text-[#D4F23F] hover:translate-x-1 transition-all duration-200 focus:outline-none"
               >
                 <span>View Source Code</span>
                 <span>&rarr;</span>

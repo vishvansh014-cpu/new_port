@@ -110,6 +110,7 @@ function Contact() {
                 <option value="General Inquiry">I need help with a project...</option>
                 <option value="Job Opportunity">Full-time / Freelance role</option>
                 <option value="Collaboration">Open Source / Collaboration</option>
+                <option value="General Inquiry">Other</option>
               </select>
             </div>
 

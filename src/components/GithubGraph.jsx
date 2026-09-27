@@ -1,20 +1,35 @@
 "use client";
 
-import React from "react";
-import {GitHubCalendar} from "react-github-calendar";
+import React, { useEffect, useState } from "react";
+import { GitHubCalendar } from "react-github-calendar";
 
 export default function GithubGraph() {
+  // 🔥 Dynamic block size based on screen width
+  const [blockSize, setBlockSize] = useState(10);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) setBlockSize(9);       // mobile
+      else if (window.innerWidth < 1024) setBlockSize(11); // tablet
+      else setBlockSize(13);                              // laptop
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const customTheme = {
     light: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
     dark: ["#1e1e22", "#2e4a1c", "#4c7b2a", "#7cb342", "#a8ff35"],
   };
 
   return (
-    <div className="relative overflow-hidden rounded-2xl border border-neutral-800 bg-[#0c0c0e] p-6 text-white shadow-xl">
-      {/* Top Animated Accent Line */}
+    <div className="relative w-[110%] -ml-[5%] rounded-2xl border border-neutral-800 bg-[#0c0c0e] p-4 sm:p-6 text-white shadow-xl overflow-hidden">
+      {/* 🔥 Top Accent Line */}
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-lime-400 via-amber-400 to-orange-500 animate-pulse" />
 
-      {/* Header */}
+      {/* 🔥 Header */}
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h2 className="text-xs font-mono tracking-widest text-neutral-400 uppercase">
@@ -38,34 +53,36 @@ export default function GithubGraph() {
         </a>
       </div>
 
-      {/* Metrics Row */}
-      <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-4">
+      {/* 🔥 Metrics */}
+      <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 sm:gap-6">
         <div>
-          <div className="text-3xl font-bold tracking-tight">45</div>
+          <div className="text-2xl sm:text-3xl font-bold">45</div>
           <div className="text-xs text-neutral-400">Contributions (2026)</div>
         </div>
         <div>
-          <div className="text-3xl font-bold tracking-tight">6</div>
+          <div className="text-2xl sm:text-3xl font-bold">6</div>
           <div className="text-xs text-neutral-400">Public Repositories</div>
         </div>
         <div>
-          <div className="text-3xl font-bold tracking-tight">JS / Python</div>
+          <div className="text-2xl sm:text-3xl font-bold">JS / Python</div>
           <div className="text-xs text-neutral-400">Primary Languages</div>
         </div>
       </div>
 
       <hr className="my-6 border-neutral-800" />
 
-      {/* Heatmap Graph */}
-      <div className="flex justify-center overflow-x-auto py-2">
-        <GitHubCalendar
-          username="vishvansh014-cpu"
-          blockSize={12}
-          blockMargin={4}
-          colorScheme="dark"
-          theme={customTheme}
-          fontSize={12}
-        />
+      {/* 🔥 Responsive Graph */}
+      <div className="w-full flex justify-center items-center">
+        <div className="w-full max-w-full flex justify-center scale-[0.75] sm:scale-[0.85] md:scale-100 origin-top">
+          <GitHubCalendar
+            username="vishvansh014-cpu"
+            blockSize={blockSize}
+            blockMargin={3}
+            colorScheme="dark"
+            theme={customTheme}
+            fontSize={12}
+          />
+        </div>
       </div>
     </div>
   );
