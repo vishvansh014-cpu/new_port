@@ -56,7 +56,7 @@ export default function GithubGraph() {
       {/* 🔥 Metrics */}
       <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 sm:gap-6">
         <div>
-          <div className="text-2xl sm:text-3xl font-bold">45</div>
+          <div className="text-2xl sm:text-3xl font-bold">55</div>
           <div className="text-xs text-neutral-400">Contributions (2026)</div>
         </div>
         <div>
