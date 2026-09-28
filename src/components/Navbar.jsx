@@ -49,7 +49,7 @@ const Navbar = () => {
           {/* EDITED LINE: Made subtitle responsive */}
           <span className="text-white font-semibold text-sm leading-tight">
             Vansh Vishwakarma
-            <span className="block text-xs font-mono text-[#D4F23F]">AIML Engineer</span>
+            <span className="block text-xs font-mono text-[#D4F23F]"></span>
           </span>
         </a>
 
